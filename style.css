@@ -100,3 +100,33 @@ footer {
     color: white;
     margin-top: 40px;
 }
+/* Supervisor section */
+.supervisor-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.supervisor-info {
+    max-width: 65%;
+}
+
+.supervisor-photo {
+    text-align: center;
+}
+
+.supervisor-photo img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid var(--primary);
+}
+
+.supervisor-photo p {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+
