@@ -239,4 +239,13 @@ footer {
     margin-top: 0;
     color: var(--primary);
 }
+/* Reduce vertical spacing for compact home page */
+.home-section {
+    margin-bottom: 40px;
+}
+
+.highlight-card p {
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
 
