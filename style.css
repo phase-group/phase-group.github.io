@@ -13,26 +13,21 @@ body {
     background: #ffffff;
 }
 
-/* ===== HEADER (ALL PAGES) ===== */
+/* ===== HEADER (ALL PAGES, SAME IMAGE) ===== */
 header {
-    background-color: var(--primary);   /* default for all pages */
+    background-image: url("assets/Galactic.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     color: white;
     padding: 3rem 1rem;
     text-align: center;
 }
 
-/* ===== HOME PAGE HEADER (IMAGE OVERRIDE) ===== */
-.home-header {
-    background-color: transparent;      /* overrides blue */
-    background-image: url("assets/Galactic.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* Text readability on image */
-.home-header h1,
-.home-header p {
+/* Improve text readability on image */
+header h1,
+header p {
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
@@ -93,7 +88,7 @@ nav a:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background: var(--primary);
+    background: #003366;
     color: white;
     margin-top: 40px;
 }
