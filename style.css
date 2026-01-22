@@ -13,27 +13,30 @@ body {
     background: #ffffff;
 }
 
-/* Header styles (generic pages) */
+/* ===== HEADER (ALL PAGES) ===== */
 header {
+    background-color: var(--primary);   /* default for all pages */
     color: white;
     padding: 3rem 1rem;
     text-align: center;
 }
 
-/* Home page header: IMAGE ONLY */
+/* ===== HOME PAGE HEADER (IMAGE OVERRIDE) ===== */
 .home-header {
+    background-color: transparent;      /* overrides blue */
     background-image: url("assets/Galactic.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+
+/* Text readability on image */
 .home-header h1,
 .home-header p {
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
-
-/* Navigation bar */
+/* ===== NAVIGATION ===== */
 nav {
     background: #eee;
     padding: 0.8rem;
@@ -54,14 +57,14 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Content container */
+/* ===== CONTENT ===== */
 .container {
     max-width: 1000px;
     margin: auto;
     padding: 30px 20px;
 }
 
-/* Member cards */
+/* ===== MEMBER CARDS ===== */
 .member-card {
     display: flex;
     align-items: center;
@@ -79,17 +82,18 @@ nav a:hover {
     margin-right: 15px;
 }
 
-/* Publications */
+/* ===== PUBLICATIONS ===== */
 .pub-item {
     margin-bottom: 20px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
 footer {
     text-align: center;
     padding: 20px;
+    background: var(--primary);
     color: white;
     margin-top: 40px;
 }
