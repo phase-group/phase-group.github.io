@@ -13,25 +13,25 @@ body {
     background: #ffffff;
 }
 
-/* Header styles */
+/* Header styles (generic pages) */
 header {
-    background: var(--primary);
     color: white;
-    padding: 2.5rem 1rem;
+    padding: 3rem 1rem;
     text-align: center;
 }
 
-/* Home page header with background image */
+/* Home page header: IMAGE ONLY */
 .home-header {
-    background:
-        linear-gradient(
-            rgba(0, 51, 102, 0.85),
-            rgba(0, 51, 102, 0.85)
-        ),
-        url("assets/Galactic.png");
+    background-image: url("assets/Galactic.png");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
+.home-header h1,
+.home-header p {
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
 
 /* Navigation bar */
 nav {
@@ -90,7 +90,6 @@ nav a:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background: var(--primary);
     color: white;
     margin-top: 40px;
 }
