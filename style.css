@@ -129,4 +129,74 @@ footer {
     font-weight: bold;
 }
 
+/* ============================= */
+/* MEMBERS PAGE STYLES */
+/* ============================= */
+
+/* Section spacing */
+.members-section {
+    margin-bottom: 50px;
+}
+
+/* Section titles */
+.members-section h3 {
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+/* ===== SUPERVISOR CARD ===== */
+.supervisor-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: var(--secondary);
+    padding: 25px;
+    border-left: 6px solid var(--primary);
+}
+
+.supervisor-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.supervisor-details h4 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.supervisor-details p {
+    margin-top: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* ===== GRID FOR STUDENTS ===== */
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* Individual member card */
+.member-card {
+    background: var(--secondary);
+    padding: 15px;
+    border-left: 4px solid var(--primary);
+    text-align: center;
+}
+
+.member-card h4 {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.member-card p {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: #555;
+}
 
