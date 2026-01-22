@@ -12,12 +12,16 @@ body {
     background: #ffffff;
 }
 
-header {
-    background: var(--primary);
-    color: white;
-    padding: 2.5rem 1rem;
-    text-align: center;
+.home-header {
+    background: linear-gradient(
+        rgba(0, 51, 102, 0.85),
+        rgba(0, 51, 102, 0.85)
+    ),
+    url("assets/galaxy.jpg");
+    background-size: cover;
+    background-position: center;
 }
+
 
 nav {
     background: #eee;
