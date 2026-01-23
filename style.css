@@ -449,3 +449,69 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* ============================= */
+/* MEMBERS PAGE – FULL-WIDTH PHOTO GRIDS */
+/* ============================= */
+
+/* Shared photo member card */
+.photo-member {
+    text-align: center;
+}
+
+.photo-member img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 6px;
+}
+
+.photo-member h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--primary);
+}
+
+/* PhD: 2 columns = full width */
+.phd-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    justify-items: center;
+}
+
+/* Long-term project: 3 columns = full width */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .phd-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Former members lists */
+.members-section h4 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+    color: var(--primary);
+}
+
+.former-list {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.former-list li {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
