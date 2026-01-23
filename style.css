@@ -80,13 +80,13 @@ nav a:hover {
 /* ============================= */
 
 .members-section {
-    margin-bottom: 60px;
+    margin-bottom: 55px;
 }
 
 .members-section h3 {
     font-size: 1.2rem;
     color: var(--primary);
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 }
 
 /* ============================= */
@@ -117,25 +117,47 @@ nav a:hover {
 }
 
 /* ============================= */
-/* PhD & LONG-TERM — SAME CARD SIZE */
+/* PhD SCHOLARS (REFERENCE SIZE) */
 /* ============================= */
 
-.member-grid,
-.member-grid-3 {
+.member-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
-/* SHARED CARD STYLE */
+/* ============================= */
+/* LONG-TERM PROJECT (3 COLUMNS) */
+/* ============================= */
+
+.member-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* ============================= */
+/* MSc PROJECT (4 COLUMNS) */
+/* ============================= */
+
+.member-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* ============================= */
+/* SHARED CARD SIZE (PhD + Project) */
+/* ============================= */
+
 .member-card,
 .member-card-medium {
     background: #f7f9fc;
-    padding: 18px;                 /* SAME padding */
+    padding: 18px;
     border-radius: 8px;
     text-align: center;
 
-    min-height: 95px;              /* SAME height */
+    min-height: 95px;            /* SAME HEIGHT */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -145,7 +167,6 @@ nav a:hover {
         0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-/* Names */
 .member-card h4,
 .member-card-medium h4 {
     margin: 0;
@@ -153,7 +174,6 @@ nav a:hover {
     color: var(--primary);
 }
 
-/* Affiliation */
 .affiliation {
     font-size: 0.8rem;
     color: #555;
@@ -161,14 +181,8 @@ nav a:hover {
 }
 
 /* ============================= */
-/* MSc STUDENTS (SMALLER) */
+/* MSc CARDS (SMALLER) */
 /* ============================= */
-
-.member-grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-}
 
 .member-card-small {
     background: #fafbfe;
@@ -194,6 +208,9 @@ footer {
 /* RESPONSIVE */
 /* ============================= */
 @media (max-width: 900px) {
+    .member-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
     .member-grid-4 {
         grid-template-columns: repeat(2, 1fr);
     }
