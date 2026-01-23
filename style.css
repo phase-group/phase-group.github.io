@@ -26,13 +26,12 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     padding: 3rem 1rem;
     text-align: center;
 }
 
 header h1 {
-    color: #ffd966; /* warm gold */
+    color: #ffd966;
     text-shadow: 0 3px 10px rgba(0, 0, 0, 0.85);
     font-size: 2.4rem;
     margin-bottom: 0.3rem;
@@ -77,28 +76,39 @@ nav a:hover {
 }
 
 /* ============================= */
-/* MEMBER PAGE STYLES (UNCHANGED) */
+/* MEMBERS PAGE */
 /* ============================= */
 
 .members-section {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 .members-section h3 {
-    border-bottom: 2px solid var(--primary);
-    padding-bottom: 5px;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
     color: var(--primary);
+    margin-bottom: 25px;
 }
 
-/* Supervisor card */
+/* ===== SUPERVISOR ===== */
 .supervisor-card {
     display: flex;
     align-items: center;
     gap: 30px;
-    background: var(--secondary);
-    padding: 25px;
-    border-left: 6px solid var(--primary);
+    background: #eef3f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.10),
+        0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.supervisor-card::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    margin-bottom: 15px;
 }
 
 .supervisor-card img {
@@ -116,37 +126,86 @@ nav a:hover {
 .supervisor-details p {
     margin-top: 8px;
     font-size: 1rem;
-    line-height: 1.5;
 }
 
-/* Student grid */
+/* ===== PhD GRID ===== */
 .member-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
-/* Individual member card */
 .member-card {
-    background: var(--secondary);
-    padding: 15px;
-    border-left: 4px solid var(--primary);
+    background: #f7f9fc;
+    padding: 18px;
+    border-radius: 8px;
     text-align: center;
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.08),
+        0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .member-card h4 {
     margin: 0;
     font-size: 1.05rem;
-}
-
-.member-card p {
-    margin-top: 6px;
-    font-size: 0.9rem;
-    color: #555;
+    color: var(--primary);
 }
 
 /* ============================= */
-/* HOME PAGE 4×4 GRID */
+/* LONG-TERM PROJECT STUDENTS */
+/* ============================= */
+
+.subsection-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin: 25px 0 15px;
+}
+
+/* SAME WIDTH AS PhD */
+.member-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.member-card-medium {
+    background: #f7f9fc;
+    padding: 14px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.08),
+        0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.affiliation {
+    font-size: 0.8rem;
+    color: #555;
+    margin-top: 4px;
+}
+
+/* ============================= */
+/* MSc STUDENTS */
+/* ============================= */
+
+.member-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.member-card-small {
+    background: #fafbfe;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.06);
+}
+
+/* ============================= */
+/* HOME PAGE GRID */
 /* ============================= */
 
 .grid-4x4 {
@@ -156,87 +215,54 @@ nav a:hover {
     gap: 20px;
 }
 
-/* Base grid item */
 .grid-box {
     padding: 18px;
     font-size: 0.95rem;
 }
 
-/* Introduction (normal academic text) */
 .intro {
     background: transparent;
 }
 
-/* ============================= */
-/* FINAL 3D CARD STYLE (HOME PAGE) */
-/* ============================= */
-
+/* Home 3D cards */
 .news,
 .contact,
 .topics,
 .publications {
-    background: #dbe6f2; /* deep blue academic tone */
+    background: #dbe6f2;
     border-radius: 8px;
-
     box-shadow:
         0 10px 22px rgba(0, 0, 0, 0.12),
         0 4px 8px rgba(0, 0, 0, 0.08);
-
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.news:hover,
-.contact:hover,
-.topics:hover,
-.publications:hover {
-    transform: translateY(-4px);
+/* ============================= */
+/* PUBLICATIONS PAGE */
+/* ============================= */
+
+.publication-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.publication-card {
+    background: #eef3f9;
+    padding: 20px 22px;
+    border-radius: 8px;
     box-shadow:
-        0 14px 30px rgba(0, 0, 0, 0.16),
-        0 6px 12px rgba(0, 0, 0, 0.10);
+        0 6px 16px rgba(0, 0, 0, 0.10),
+        0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
-/* Headings */
-.grid-box h2,
-.grid-box h3 {
-    margin-top: 0;
+.publication-title {
+    font-weight: 600;
     color: var(--primary);
 }
 
-/* Grid placement */
-.news {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-}
-
-.contact {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-}
-
-.intro {
-    grid-column: 2 / 5;
-    grid-row: 1 / 3;
-}
-
-.topics {
-    grid-column: 1 / 3;
-    grid-row: 3 / 5;
-}
-
-.publications {
-    grid-column: 3 / 5;
-    grid-row: 3 / 5;
-}
-
-/* Compact lists */
-.grid-box ul,
-.grid-box ol {
-    padding-left: 18px;
-    margin: 0;
-}
-
-.grid-box li {
-    margin-bottom: 6px;
+.publication-meta {
+    font-size: 0.85rem;
+    color: #555;
 }
 
 /* ============================= */
@@ -253,204 +279,21 @@ footer {
 /* ============================= */
 /* RESPONSIVE */
 /* ============================= */
-@media (max-width: 1000px) {
-    .grid-4x4 {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-
-    .news,
-    .contact,
-    .intro,
-    .topics,
-    .publications {
-        grid-column: auto;
-        grid-row: auto;
-    }
-}
-/* ============================= */
-/* MEMBERS PAGE – ELEGANT STYLE */
-/* ============================= */
-
-/* Supervisor feature panel */
-.supervisor-card {
-    background: #eef3f9; /* slightly lighter than home cards */
-    padding: 30px;
-    border-radius: 10px;
-
-    box-shadow:
-        0 6px 16px rgba(0, 0, 0, 0.10),
-        0 2px 6px rgba(0, 0, 0, 0.06);
-}
-
-/* Subtle accent line (authority) */
-.supervisor-card::before {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: var(--primary);
-    margin-bottom: 15px;
-}
-
-/* Student profile tiles */
-.member-card {
-    background: #f7f9fc;
-    border-radius: 8px;
-    padding: 18px;
-    text-align: center;
-
-    box-shadow:
-        0 4px 10px rgba(0, 0, 0, 0.08),
-        0 1px 3px rgba(0, 0, 0, 0.05);
-
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Gentle hover (optional, professional-safe) */
-.member-card:hover {
-    transform: translateY(-3px);
-    box-shadow:
-        0 8px 18px rgba(0, 0, 0, 0.12),
-        0 3px 6px rgba(0, 0, 0, 0.08);
-}
-
-/* Names */
-.member-card h4 {
-    margin: 0;
-    font-size: 1.05rem;
-    color: var(--primary);
-}
-
-/* Section spacing refinement */
-.members-section {
-    margin-bottom: 60px;
-}
-
-.members-section h3 {
-    border-bottom: none;
-    font-size: 1.2rem;
-    color: var(--primary);
-    margin-bottom: 25px;
-}
-
-/* ============================= */
-/* PUBLICATIONS PAGE – ELEGANT */
-/* ============================= */
-
-.publication-list {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.publication-card {
-    background: #eef3f9; /* same family as members supervisor */
-    padding: 20px 22px;
-    border-radius: 8px;
-
-    box-shadow:
-        0 6px 16px rgba(0, 0, 0, 0.10),
-        0 2px 6px rgba(0, 0, 0, 0.06);
-
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-/* Very subtle hover (optional) */
-.publication-card:hover {
-    transform: translateY(-2px);
-    box-shadow:
-        0 10px 22px rgba(0, 0, 0, 0.14),
-        0 4px 8px rgba(0, 0, 0, 0.08);
-}
-
-/* Publication text */
-.publication-card p {
-    margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-/* Title emphasis */
-.publication-title {
-    font-weight: 600;
-    color: var(--primary);
-}
-
-/* Meta info */
-.publication-meta {
-    font-size: 0.85rem;
-    color: #555;
-    margin-top: 6px;
-}
-
-/* ============================= */
-/* LONG-TERM & MSc STUDENT STYLES */
-/* ============================= */
-
-/* Subsection heading */
-.subsection-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--primary);
-    margin: 25px 0 15px;
-}
-
-/* 3-column grid (Long-term students) */
-.member-grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-}
-
-/* 4-column grid (MSc students) */
-.member-grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-}
-
-/* Medium card (Long-term students) */
-.member-card-medium {
-    background: #f7f9fc;
-    padding: 14px;
-    border-radius: 6px;
-    text-align: center;
-
-    box-shadow:
-        0 3px 8px rgba(0, 0, 0, 0.08),
-        0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-/* Small card (MSc students) */
-.member-card-small {
-    background: #fafbfe;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-
-    box-shadow:
-        0 2px 5px rgba(0, 0, 0, 0.06);
-}
-
-/* Affiliation text */
-.affiliation {
-    font-size: 0.8rem;
-    color: #555;
-    margin-top: 4px;
-}
-
-/* Responsive fallback */
 @media (max-width: 900px) {
-    .member-grid-3,
     .member-grid-4 {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+    .member-grid,
     .member-grid-3,
     .member-grid-4 {
         grid-template-columns: 1fr;
+    }
+
+    .grid-4x4 {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
 }
