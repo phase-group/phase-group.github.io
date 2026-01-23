@@ -268,3 +268,68 @@ footer {
         grid-row: auto;
     }
 }
+/* ============================= */
+/* MEMBERS PAGE – ELEGANT STYLE */
+/* ============================= */
+
+/* Supervisor feature panel */
+.supervisor-card {
+    background: #eef3f9; /* slightly lighter than home cards */
+    padding: 30px;
+    border-radius: 10px;
+
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.10),
+        0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* Subtle accent line (authority) */
+.supervisor-card::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* Student profile tiles */
+.member-card {
+    background: #f7f9fc;
+    border-radius: 8px;
+    padding: 18px;
+    text-align: center;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.08),
+        0 1px 3px rgba(0, 0, 0, 0.05);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Gentle hover (optional, professional-safe) */
+.member-card:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.12),
+        0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Names */
+.member-card h4 {
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--primary);
+}
+
+/* Section spacing refinement */
+.members-section {
+    margin-bottom: 60px;
+}
+
+.members-section h3 {
+    border-bottom: none;
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 25px;
+}
