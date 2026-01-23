@@ -384,3 +384,73 @@ footer {
     margin-top: 6px;
 }
 
+/* ============================= */
+/* LONG-TERM & MSc STUDENT STYLES */
+/* ============================= */
+
+/* Subsection heading */
+.subsection-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin: 25px 0 15px;
+}
+
+/* 3-column grid (Long-term students) */
+.member-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+/* 4-column grid (MSc students) */
+.member-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* Medium card (Long-term students) */
+.member-card-medium {
+    background: #f7f9fc;
+    padding: 14px;
+    border-radius: 6px;
+    text-align: center;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.08),
+        0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Small card (MSc students) */
+.member-card-small {
+    background: #fafbfe;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.06);
+}
+
+/* Affiliation text */
+.affiliation {
+    font-size: 0.8rem;
+    color: #555;
+    margin-top: 4px;
+}
+
+/* Responsive fallback */
+@media (max-width: 900px) {
+    .member-grid-3,
+    .member-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .member-grid-3,
+    .member-grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
