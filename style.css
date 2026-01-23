@@ -342,3 +342,33 @@ footer {
         grid-row: auto;
     }
 }
+/* ============================= */
+/* REFINED 3D CARD STYLE (DEEPER) */
+/* ============================= */
+
+/* Slightly deeper neutral background */
+.news,
+.contact,
+.topics,
+.publications {
+    background: #e9eef3; /* soft blue-grey */
+    border-radius: 8px;
+
+    /* layered shadow for depth */
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.10),
+        0 3px 6px rgba(0, 0, 0, 0.06);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Optional subtle hover (professional, not flashy) */
+.news:hover,
+.contact:hover,
+.topics:hover,
+.publications:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 12px 26px rgba(0, 0, 0, 0.14),
+        0 5px 10px rgba(0, 0, 0, 0.08);
+}
