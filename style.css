@@ -515,3 +515,44 @@ footer {
     font-size: 0.95rem;
     line-height: 1.4;
 }
+/* ================================= */
+/* FORMER MEMBERS – TABLE STYLE */
+/* ================================= */
+
+.former-table {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+/* Each row */
+.former-row {
+    display: grid;
+    grid-template-columns: 220px 1fr; /* LEFT = names, RIGHT = position */
+    column-gap: 20px;
+    align-items: start;
+}
+
+/* Name column */
+.former-name {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Position column */
+.former-position {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .former-row {
+        grid-template-columns: 1fr;
+    }
+
+    .former-name {
+        margin-bottom: 2px;
+    }
+}
