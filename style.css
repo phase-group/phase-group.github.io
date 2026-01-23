@@ -19,7 +19,7 @@ body {
 }
 
 /* ============================= */
-/* HEADER (ALL PAGES) */
+/* HEADER */
 /* ============================= */
 header {
     background-image: url("assets/Galactic.png");
@@ -67,7 +67,7 @@ nav a:hover {
 }
 
 /* ============================= */
-/* CONTENT */
+/* CONTAINER */
 /* ============================= */
 .container {
     max-width: 1000px;
@@ -89,7 +89,9 @@ nav a:hover {
     margin-bottom: 25px;
 }
 
-/* ===== SUPERVISOR ===== */
+/* ============================= */
+/* SUPERVISOR */
+/* ============================= */
 .supervisor-card {
     display: flex;
     align-items: center;
@@ -100,15 +102,6 @@ nav a:hover {
     box-shadow:
         0 6px 16px rgba(0, 0, 0, 0.10),
         0 2px 6px rgba(0, 0, 0, 0.06);
-}
-
-.supervisor-card::before {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: var(--primary);
-    margin-bottom: 15px;
 }
 
 .supervisor-card img {
@@ -123,70 +116,52 @@ nav a:hover {
     font-size: 1.4rem;
 }
 
-.supervisor-details p {
-    margin-top: 8px;
-    font-size: 1rem;
-}
-
-/* ===== PhD GRID ===== */
-.member-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-.member-card {
-    background: #f7f9fc;
-    padding: 18px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow:
-        0 4px 10px rgba(0, 0, 0, 0.08),
-        0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.member-card h4 {
-    margin: 0;
-    font-size: 1.05rem;
-    color: var(--primary);
-}
-
 /* ============================= */
-/* LONG-TERM PROJECT STUDENTS */
+/* PhD & LONG-TERM — SAME CARD SIZE */
 /* ============================= */
 
-.subsection-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--primary);
-    margin: 25px 0 15px;
-}
-
-/* SAME WIDTH AS PhD */
+.member-grid,
 .member-grid-3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
+/* SHARED CARD STYLE */
+.member-card,
 .member-card-medium {
     background: #f7f9fc;
-    padding: 14px;
-    border-radius: 6px;
+    padding: 18px;                 /* SAME padding */
+    border-radius: 8px;
     text-align: center;
+
+    min-height: 95px;              /* SAME height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     box-shadow:
-        0 3px 8px rgba(0, 0, 0, 0.08),
+        0 4px 10px rgba(0, 0, 0, 0.08),
         0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
+/* Names */
+.member-card h4,
+.member-card-medium h4 {
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--primary);
+}
+
+/* Affiliation */
 .affiliation {
     font-size: 0.8rem;
     color: #555;
-    margin-top: 4px;
+    margin-top: 6px;
 }
 
 /* ============================= */
-/* MSc STUDENTS */
+/* MSc STUDENTS (SMALLER) */
 /* ============================= */
 
 .member-grid-4 {
@@ -202,67 +177,6 @@ nav a:hover {
     text-align: center;
     box-shadow:
         0 2px 5px rgba(0, 0, 0, 0.06);
-}
-
-/* ============================= */
-/* HOME PAGE GRID */
-/* ============================= */
-
-.grid-4x4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, minmax(140px, auto));
-    gap: 20px;
-}
-
-.grid-box {
-    padding: 18px;
-    font-size: 0.95rem;
-}
-
-.intro {
-    background: transparent;
-}
-
-/* Home 3D cards */
-.news,
-.contact,
-.topics,
-.publications {
-    background: #dbe6f2;
-    border-radius: 8px;
-    box-shadow:
-        0 10px 22px rgba(0, 0, 0, 0.12),
-        0 4px 8px rgba(0, 0, 0, 0.08);
-}
-
-/* ============================= */
-/* PUBLICATIONS PAGE */
-/* ============================= */
-
-.publication-list {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.publication-card {
-    background: #eef3f9;
-    padding: 20px 22px;
-    border-radius: 8px;
-    box-shadow:
-        0 6px 16px rgba(0, 0, 0, 0.10),
-        0 2px 6px rgba(0, 0, 0, 0.06);
-}
-
-.publication-title {
-    font-weight: 600;
-    color: var(--primary);
-}
-
-.publication-meta {
-    font-size: 0.85rem;
-    color: #555;
 }
 
 /* ============================= */
@@ -290,10 +204,5 @@ footer {
     .member-grid-3,
     .member-grid-4 {
         grid-template-columns: 1fr;
-    }
-
-    .grid-4x4 {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
     }
 }
