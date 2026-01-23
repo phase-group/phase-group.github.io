@@ -333,3 +333,54 @@ footer {
     color: var(--primary);
     margin-bottom: 25px;
 }
+
+/* ============================= */
+/* PUBLICATIONS PAGE – ELEGANT */
+/* ============================= */
+
+.publication-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.publication-card {
+    background: #eef3f9; /* same family as members supervisor */
+    padding: 20px 22px;
+    border-radius: 8px;
+
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.10),
+        0 2px 6px rgba(0, 0, 0, 0.06);
+
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Very subtle hover (optional) */
+.publication-card:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 10px 22px rgba(0, 0, 0, 0.14),
+        0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Publication text */
+.publication-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Title emphasis */
+.publication-title {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Meta info */
+.publication-meta {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 6px;
+}
+
