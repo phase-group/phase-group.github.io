@@ -364,3 +364,88 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* ========================================= */
+/* MEMBERS PAGE – STRUCTURED PHOTO LAYOUT */
+/* ========================================= */
+
+/* Supervisor emphasis */
+.supervisor-featured {
+    display: flex;
+    gap: 22px;
+    background: #eef3f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow:
+        0 6px 16px rgba(0,0,0,0.10),
+        0 2px 6px rgba(0,0,0,0.06);
+}
+
+.supervisor-featured img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.supervisor-featured h4 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--primary);
+}
+
+.supervisor-featured .role {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+/* Shared photo member style */
+.photo-member {
+    text-align: center;
+}
+
+.photo-member img {
+    width: 180px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 6px;
+}
+
+.photo-member h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--primary);
+}
+
+/* PhD grid: EXACTLY 2 columns */
+.phd-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 40px;
+}
+
+/* Project grid: EXACTLY 3 columns */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 30px;
+}
+
+/* Past members list */
+.past-member-list {
+    padding-left: 20px;
+    font-size: 0.95rem;
+}
+
+.past-member-list li {
+    margin-bottom: 6px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .phd-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
