@@ -14,24 +14,25 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     color: var(--text);
-    line-height: 1.4;
+    line-height: 1.6;
     background: #ffffff;
 }
 
 /* ============================= */
-/* HEADER */
+/* HEADER (ALL PAGES) */
 /* ============================= */
 header {
     background-image: url("assets/Galactic.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
     padding: 3rem 1rem;
     text-align: center;
 }
 
 header h1 {
-    color: #ffd966;
+    color: #ffd966; /* warm gold */
     text-shadow: 0 3px 10px rgba(0, 0, 0, 0.85);
     font-size: 2.4rem;
     margin-bottom: 0.3rem;
@@ -67,7 +68,7 @@ nav a:hover {
 }
 
 /* ============================= */
-/* CONTAINER */
+/* CONTENT */
 /* ============================= */
 .container {
     max-width: 1000px;
@@ -75,66 +76,29 @@ nav a:hover {
     padding: 30px 20px;
 }
 
-/* ===================================================== */
-/* ===================== HOME PAGE ===================== */
-/* ===================================================== */
-/* THIS SECTION IS UNCHANGED */
-
-.grid-4x4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, minmax(140px, auto));
-    gap: 20px;
-}
-
-.grid-box {
-    padding: 18px;
-    font-size: 0.95rem;
-}
-
-.intro {
-    background: transparent;
-}
-
-/* Home 3D cards */
-.news,
-.contact,
-.topics,
-.publications {
-    background: #dbe6f2;
-    border-radius: 8px;
-    box-shadow:
-        0 10px 22px rgba(0, 0, 0, 0.12),
-        0 4px 8px rgba(0, 0, 0, 0.08);
-}
-
-/* ===================================================== */
-/* =================== MEMBERS PAGE ==================== */
-/* ===================================================== */
+/* ============================= */
+/* MEMBER PAGE STYLES (UNCHANGED) */
+/* ============================= */
 
 .members-section {
-    margin-bottom: 45px;
+    margin-bottom: 50px;
 }
 
 .members-section h3 {
-    font-size: 1.2rem;
-    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 5px;
     margin-bottom: 20px;
+    color: var(--primary);
 }
 
-/* ============================= */
-/* SUPERVISOR */
-/* ============================= */
+/* Supervisor card */
 .supervisor-card {
     display: flex;
     align-items: center;
     gap: 30px;
-    background: #eef3f9;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow:
-        0 6px 16px rgba(0, 0, 0, 0.10),
-        0 2px 6px rgba(0, 0, 0, 0.06);
+    background: var(--secondary);
+    padding: 25px;
+    border-left: 6px solid var(--primary);
 }
 
 .supervisor-card img {
@@ -149,78 +113,130 @@ nav a:hover {
     font-size: 1.4rem;
 }
 
-/* ============================= */
-/* PhD SCHOLARS */
-/* ============================= */
+.supervisor-details p {
+    margin-top: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Student grid */
 .member-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
+    gap: 20px;
 }
 
-/* ============================= */
-/* PROJECT STUDENTS (3 COLUMNS) */
-/* ============================= */
-.member-grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);   /* EXACTLY 3 columns */
-    gap: 16px;
-}
-
-/* ============================= */
-/* MSc STUDENTS (4 COLUMNS) */
-/* ============================= */
-.member-grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);   /* EXACTLY 4 columns */
-    gap: 14px;
-}
-
-/* ============================= */
-/* SHARED CARD SIZE (SMALL HEIGHT) */
-/* ============================= */
-.member-card,
-.member-card-medium {
-    background: #f7f9fc;
-    padding: 6px 8px;
-    border-radius: 5px;
+/* Individual member card */
+.member-card {
+    background: var(--secondary);
+    padding: 15px;
+    border-left: 4px solid var(--primary);
     text-align: center;
+}
 
-    min-height: 48px;  /* SMALL HEIGHT, AS REQUESTED */
+.member-card h4 {
+    margin: 0;
+    font-size: 1.05rem;
+}
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.member-card p {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* ============================= */
+/* HOME PAGE 4×4 GRID */
+/* ============================= */
+
+.grid-4x4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, minmax(140px, auto));
+    gap: 20px;
+}
+
+/* Base grid item */
+.grid-box {
+    padding: 18px;
+    font-size: 0.95rem;
+}
+
+/* Introduction (normal academic text) */
+.intro {
+    background: transparent;
+}
+
+/* ============================= */
+/* FINAL 3D CARD STYLE (HOME PAGE) */
+/* ============================= */
+
+.news,
+.contact,
+.topics,
+.publications {
+    background: #dbe6f2; /* deep blue academic tone */
+    border-radius: 8px;
 
     box-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.08);
+        0 10px 22px rgba(0, 0, 0, 0.12),
+        0 4px 8px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.member-card h4,
-.member-card-medium h4 {
-    margin: 0;
-    font-size: 0.95rem;
+.news:hover,
+.contact:hover,
+.topics:hover,
+.publications:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.16),
+        0 6px 12px rgba(0, 0, 0, 0.10);
+}
+
+/* Headings */
+.grid-box h2,
+.grid-box h3 {
+    margin-top: 0;
     color: var(--primary);
 }
 
-.affiliation {
-    font-size: 0.75rem;
-    color: #555;
-    margin-top: 3px;
+/* Grid placement */
+.news {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
 
-/* ============================= */
-/* MSc SMALLER CARDS */
-/* ============================= */
-.member-card-small {
-    background: #fafbfe;
-    padding: 5px;
-    min-height: 38px;
-    border-radius: 4px;
-    text-align: center;
-    font-size: 0.85rem;
-    box-shadow:
-        0 1px 3px rgba(0, 0, 0, 0.06);
+.contact {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.intro {
+    grid-column: 2 / 5;
+    grid-row: 1 / 3;
+}
+
+.topics {
+    grid-column: 1 / 3;
+    grid-row: 3 / 5;
+}
+
+.publications {
+    grid-column: 3 / 5;
+    grid-row: 3 / 5;
+}
+
+/* Compact lists */
+.grid-box ul,
+.grid-box ol {
+    padding-left: 18px;
+    margin: 0;
+}
+
+.grid-box li {
+    margin-bottom: 6px;
 }
 
 /* ============================= */
@@ -237,20 +253,18 @@ footer {
 /* ============================= */
 /* RESPONSIVE */
 /* ============================= */
-@media (max-width: 900px) {
-    .member-grid-3 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .member-grid-4 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .member-grid,
-    .member-grid-3,
-    .member-grid-4,
+@media (max-width: 1000px) {
     .grid-4x4 {
         grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .news,
+    .contact,
+    .intro,
+    .topics,
+    .publications {
+        grid-column: auto;
+        grid-row: auto;
     }
 }
