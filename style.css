@@ -23,7 +23,7 @@ body {
 /* ============================= */
 header {
     background-image: 
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
         url("assets/Galactic.png");
 
     background-size: cover;
@@ -46,13 +46,7 @@ header p {
     font-size: 1.1rem;
 }
 /* PI attribution line under title */
-.pi-line {
-    color: #f1f1f1;   /* clean white */
-    font-weight: 500;
-    color: #ffe8a3; /* soft gold, readable on galaxy background */
-    margin: 0.2rem 0 0.6rem;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
-}
+
 
 /* ============================= */
 /* NAVIGATION */
@@ -605,16 +599,22 @@ footer {
 }
 
 .pi-line {
-    margin: 2px 0;
-    font-size: 14px;
-    color: #555;
+    margin: 4px 0;
+    font-size: 1.05rem;
+    color: #ffd966;   /* soft gold (lighter than title) */
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
 }
 
 .tagline {
+    font-size: 1rem;
+    color: #ffe8a3;   /* even softer gold */
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
+/* .tagline {
     margin: 0;
     font-size: 13px;
     color: #777;
-}
+} */
 
 /* NAVBAR */
 .navbar {
