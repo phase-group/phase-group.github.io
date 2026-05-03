@@ -611,7 +611,7 @@ footer {
 /* TEXT */
 .title-block h1 {
     margin: 0;
-    font-size: 24px;
+    font-size: 4.5rem;   /* match your header */
 }
 
 .pi-line {
