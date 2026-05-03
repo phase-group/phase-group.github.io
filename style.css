@@ -581,10 +581,10 @@ footer {
     gap: 15px;
 }
 
-.logo {
+/* .logo {
     height: 200px;
     width: auto;
-}
+} */
 /* ===== HEADER (IISc/IUCAA style) ===== */
 .main-header {
     display: flex;
@@ -604,7 +604,8 @@ footer {
 
 /* LOGO */
 .logo {
-    height: 80px;
+    height: 240px;
+    width: auto;
 }
 
 /* TEXT */
