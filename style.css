@@ -21,7 +21,8 @@ body {
 /* ============================= */
 /* HEADER (ALL PAGES) */
 /* ============================= */
-header {
+
+/* header {
     background-image: 
         linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
         url("assets/Galactic.png");
@@ -31,6 +32,20 @@ header {
     background-repeat: no-repeat;
 
     padding: 3rem 1rem;
+} */
+header {
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("assets/Galactic.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 350px;              /* 🔥 increase this */
+    display: flex;
+    align-items: center;        /* vertically center text */
+    padding-left: 60px;         /* move text from left edge */
 }
 
 header h1 {
