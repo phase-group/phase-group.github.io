@@ -51,7 +51,7 @@ header {
 header h1 {
     color: #ffcc33;   /* richer gold */
     text-shadow: 0 3px 10px rgba(0, 0, 0, 0.85);
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     margin-bottom: 0.3rem;
 }
 
@@ -611,7 +611,7 @@ footer {
 /* TEXT */
 .title-block h1 {
     margin: 0;
-    font-size: 4.5rem;   /* match your header */
+    font-size: 3.5rem;   /* match your header */
 }
 
 .pi-line {
