@@ -22,30 +22,32 @@ body {
 /* HEADER (ALL PAGES) */
 /* ============================= */
 header {
-    background-image: url("assets/Galactic.png");
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("assets/Galactic.png");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
     padding: 3rem 1rem;
-    text-align: center;
 }
 
 header h1 {
-    color: #ffd966; /* warm gold */
+    color: #ffcc33;   /* richer gold */
     text-shadow: 0 3px 10px rgba(0, 0, 0, 0.85);
     font-size: 2.4rem;
     margin-bottom: 0.3rem;
 }
 
 header p {
-    color: #ffffff;
+    color: #dcdcdc;   /* soft white-grey */
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
     font-size: 1.1rem;
 }
 /* PI attribution line under title */
 .pi-line {
-    font-size: 1rem;
+    color: #f1f1f1;   /* clean white */
     font-weight: 500;
     color: #ffe8a3; /* soft gold, readable on galaxy background */
     margin: 0.2rem 0 0.6rem;
