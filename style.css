@@ -66,14 +66,14 @@ header p {
 /* ============================= */
 /* NAVIGATION */
 /* ============================= */
-nav {
+/* nav {
     background: #eee;
     padding: 0.8rem;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 100;
-}
+} */
 
 nav a {
     margin: 0 15px;
@@ -623,7 +623,7 @@ footer {
 
 .tagline {
     font-size: 1rem;
-    color: #ffffff   /* even softer gold */
+    color: #ffffff;   /* even softer gold */
     text-shadow: 0 2px 6px rgba(0,0,0,0.7);
 }
 /* .tagline {
@@ -655,22 +655,31 @@ header {
 }
 
 /* NAVBAR at bottom of image */
+/* CLEAN FULL-WIDTH NAVBAR AT BOTTOM */
 .header-nav {
     position: absolute;
     bottom: 0;
-    right: 40px;   /* move left/right */
-    
-    background: rgba(255, 255, 255, 0.9);
-    padding: 10px 20px;
-    border-radius: 6px;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    background: rgba(0, 0, 0, 0.6);   /* dark transparent */
+    padding: 12px 0;
 }
 
 /* Nav links */
 .header-nav a {
-    margin: 0 15px;
+    color: #ffffff;
     text-decoration: none;
-    color: #003366;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.header-nav a:hover {
+    color: #ffcc33;   /* matches your title */
 }
 
 .header-nav a:hover {
