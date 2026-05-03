@@ -42,7 +42,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
 
-    height: 240px;              /* 🔥 increase this */
+    height: 300px;              /* 🔥 increase this */
     display: flex;
     align-items: center;        /* vertically center text */
     padding-left: 60px;         /* move text from left edge */
