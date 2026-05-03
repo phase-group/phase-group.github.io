@@ -648,3 +648,31 @@ footer {
 .navbar a:hover {
     color: #0056b3;
 }
+
+/* Make header a positioning container */
+header {
+    position: relative;
+}
+
+/* NAVBAR at bottom of image */
+.header-nav {
+    position: absolute;
+    bottom: 0;
+    right: 40px;   /* move left/right */
+    
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+/* Nav links */
+.header-nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #003366;
+    font-weight: 600;
+}
+
+.header-nav a:hover {
+    color: #0056b3;
+}
