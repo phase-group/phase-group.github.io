@@ -75,7 +75,7 @@ header {
 }
 
 /* ============================= */
-/* NAVBAR (BOTTOM OF HEADER) */
+/* NAVBAR */
 /* ============================= */
 .header-nav {
     position: absolute;
@@ -112,7 +112,7 @@ header {
 }
 
 /* ============================= */
-/* GRID */
+/* GRID (DEFAULT / MOBILE SAFE) */
 /* ============================= */
 .grid-4x4 {
     display: grid;
@@ -122,6 +122,48 @@ header {
 
 .grid-box {
     padding: 18px;
+}
+
+/* ============================= */
+/* INDEX PAGE FIX (DESKTOP ONLY) */
+/* ============================= */
+@media (min-width: 769px) {
+
+    .grid-4x4 {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 1fr;   /* 🔥 equal heights */
+        gap: 20px;
+    }
+
+    .grid-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .news {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .contact {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .intro {
+        grid-column: 2 / 5;
+        grid-row: 1 / 3;
+    }
+
+    .topics {
+        grid-column: 1 / 3;
+        grid-row: 3 / 5;
+    }
+
+    .publications {
+        grid-column: 3 / 5;
+        grid-row: 3 / 5;
+    }
 }
 
 /* ============================= */
@@ -202,104 +244,60 @@ footer {
     }
 }
 
-/* New code  */
 /* ============================= */
-/* MEMBERS PAGE FIX */
+/* MEMBERS PAGE (UNCHANGED) */
 /* ============================= */
-
-/* Grid for members */
 .member-photo-grid {
     display: grid;
     gap: 25px;
 }
 
-/* PhD → 2 columns */
 .phd-grid {
     grid-template-columns: repeat(2, 1fr);
 }
 
-/* Project → 3 columns */
 .project-grid {
     grid-template-columns: repeat(3, 1fr);
 }
 
-/* Member card */
 .photo-member {
     text-align: center;
+    background: #f7f9fc;
+    padding: 14px;
+    border-radius: 10px;
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15),
+        0 4px 10px rgba(0, 0, 0, 0.10);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Image fix */
+.photo-member:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.20),
+        0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
 .photo-member img {
     width: 100%;
     max-width: 220px;
-    height: auto;
     aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 6px;
 }
 
-/* Name */
-.photo-member h4 {
-    margin: 6px 0 2px;
-    font-size: 1rem;
-}
-
-/* Role text */
 .member-role {
     font-size: 0.9rem;
     color: #555;
 }
 
-/* ============================= */
-/* MOBILE FIX */
-/* ============================= */
-@media (max-width: 768px) {
-
-    .phd-grid,
-    .project-grid {
-        grid-template-columns: 1fr;   /* stack */
-    }
-
-    .photo-member img {
-        max-width: 100%;
-    }
-}
-
-.photo-member {
-    background: #f7f9fc;
-    padding: 14px;
-    border-radius: 10px;
-
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.15),
-        0 4px 10px rgba(0, 0, 0, 0.10);
-
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.photo-member:hover {
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 14px 35px rgba(0, 0, 0, 0.20),
-        0 6px 14px rgba(0, 0, 0, 0.12);
-}
 .supervisor-featured {
     display: flex;
     gap: 20px;
     background: #eef3f9;
     padding: 25px;
     border-radius: 10px;
-
     box-shadow:
         0 10px 25px rgba(0, 0, 0, 0.15),
         0 4px 10px rgba(0, 0, 0, 0.10);
-
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.supervisor-featured:hover {
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 14px 35px rgba(0, 0, 0, 0.20),
-        0 6px 14px rgba(0, 0, 0, 0.12);
 }
