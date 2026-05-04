@@ -19,20 +19,8 @@ body {
 }
 
 /* ============================= */
-/* HEADER (ALL PAGES) */
+/* HEADER */
 /* ============================= */
-
-/* header {
-    background-image: 
-        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
-        url("assets/Galactic.png");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    padding: 3rem 1rem;
-} */
 header {
     background-image: 
         linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
@@ -42,48 +30,76 @@ header {
     background-position: center;
     background-repeat: no-repeat;
 
-    height: 300px;              /* 🔥 increase this */
+    min-height: 300px;
     display: flex;
-    align-items: center;        /* vertically center text */
-    padding-left: 60px;         /* move text from left edge */
+    align-items: center;
+    padding: 20px 60px;
+    position: relative;
 }
 
-header h1 {
-    color: #ffcc33;   /* richer gold */
-    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.85);
+/* HEADER CONTENT */
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 2;
+}
+
+/* LOGO */
+.logo {
+    height: 120px;
+    width: auto;
+    cursor: pointer;
+}
+
+/* TITLE */
+.title-block h1 {
+    margin: 0;
     font-size: 3.5rem;
-    margin-bottom: 0.3rem;
+    color: #ffcc33;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.85);
 }
 
-header p {
-    color: #dcdcdc;   /* soft white-grey */
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
-    font-size: 1.1rem;
+/* SUBTEXT */
+.pi-line {
+    margin: 4px 0;
+    font-size: 1.05rem;
+    color: #ffd966;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
 }
-/* PI attribution line under title */
 
+.tagline {
+    font-size: 1rem;
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+}
 
 /* ============================= */
-/* NAVIGATION */
+/* NAVBAR (BOTTOM OF HEADER) */
 /* ============================= */
-/* nav {
-    background: #eee;
-    padding: 0.8rem;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-} */
+.header-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 
-nav a {
-    margin: 0 15px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    background: rgba(0, 0, 0, 0.6);
+    padding: 12px 0;
+}
+
+.header-nav a {
+    color: #ffffff;
     text-decoration: none;
-    color: var(--primary);
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: 500;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.header-nav a:hover {
+    color: #ffcc33;
 }
 
 /* ============================= */
@@ -96,112 +112,29 @@ nav a:hover {
 }
 
 /* ============================= */
-/* MEMBER PAGE STYLES (UNCHANGED) */
+/* GRID */
 /* ============================= */
-
-.members-section {
-    margin-bottom: 50px;
-}
-
-.members-section h3 {
-    border-bottom: 2px solid var(--primary);
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-    color: var(--primary);
-}
-
-/* Supervisor card */
-.supervisor-card {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    background: var(--secondary);
-    padding: 25px;
-    border-left: 6px solid var(--primary);
-}
-
-.supervisor-card img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.supervisor-details h4 {
-    margin: 0;
-    font-size: 1.4rem;
-}
-
-.supervisor-details p {
-    margin-top: 8px;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-/* Student grid */
-.member-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-/* Individual member card */
-.member-card {
-    background: var(--secondary);
-    padding: 15px;
-    border-left: 4px solid var(--primary);
-    text-align: center;
-}
-
-.member-card h4 {
-    margin: 0;
-    font-size: 1.05rem;
-}
-
-.member-card p {
-    margin-top: 6px;
-    font-size: 0.9rem;
-    color: #555;
-}
-
-/* ============================= */
-/* HOME PAGE 4×4 GRID */
-/* ============================= */
-
 .grid-4x4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, minmax(140px, auto));
     gap: 20px;
 }
 
-/* Base grid item */
 .grid-box {
     padding: 18px;
-    font-size: 0.95rem;
-}
-
-/* Introduction (normal academic text) */
-.intro {
-    background: transparent;
 }
 
 /* ============================= */
-/* FINAL 3D CARD STYLE (HOME PAGE) */
+/* CARDS */
 /* ============================= */
-
 .news,
 .contact,
 .topics,
 .publications {
-    background: #dbe6f2; /* deep blue academic tone */
+    background: #dbe6f2;
     border-radius: 8px;
-
-    box-shadow:
-        0 10px 22px rgba(0, 0, 0, 0.12),
-        0 4px 8px rgba(0, 0, 0, 0.08);
-
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+    transition: 0.2s;
 }
 
 .news:hover,
@@ -209,53 +142,6 @@ nav a:hover {
 .topics:hover,
 .publications:hover {
     transform: translateY(-4px);
-    box-shadow:
-        0 14px 30px rgba(0, 0, 0, 0.16),
-        0 6px 12px rgba(0, 0, 0, 0.10);
-}
-
-/* Headings */
-.grid-box h2,
-.grid-box h3 {
-    margin-top: 0;
-    color: var(--primary);
-}
-
-/* Grid placement */
-.news {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-}
-
-.contact {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-}
-
-.intro {
-    grid-column: 2 / 5;
-    grid-row: 1 / 3;
-}
-
-.topics {
-    grid-column: 1 / 3;
-    grid-row: 3 / 5;
-}
-
-.publications {
-    grid-column: 3 / 5;
-    grid-row: 3 / 5;
-}
-
-/* Compact lists */
-.grid-box ul,
-.grid-box ol {
-    padding-left: 18px;
-    margin: 0;
-}
-
-.grid-box li {
-    margin-bottom: 6px;
 }
 
 /* ============================= */
@@ -270,418 +156,48 @@ footer {
 }
 
 /* ============================= */
-/* RESPONSIVE */
+/* MOBILE RESPONSIVE */
 /* ============================= */
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+        min-height: 260px;
+        align-items: flex-start;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        height: 70px;
+    }
+
+    .title-block h1 {
+        font-size: 2.2rem;
+    }
+
+    .pi-line {
+        font-size: 0.95rem;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+    }
+
+    .header-nav {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .header-nav a {
+        font-size: 14px;
+    }
+
     .grid-4x4 {
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
     }
-
-    .news,
-    .contact,
-    .intro,
-    .topics,
-    .publications {
-        grid-column: auto;
-        grid-row: auto;
-    }
-}
-
-/* ================================================= */
-/* MEMBERS PAGE – PHOTO-BASED ACADEMIC STYLE ONLY */
-/* ================================================= */
-
-/* Supervisor emphasis */
-.supervisor-featured {
-    display: flex;
-    gap: 20px;
-    background: #eef3f9;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow:
-        0 6px 16px rgba(0,0,0,0.10),
-        0 2px 6px rgba(0,0,0,0.06);
-}
-
-.supervisor-featured img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.supervisor-featured h4 {
-    margin: 0;
-    font-size: 1.4rem;
-    color: var(--primary);
-}
-
-.supervisor-featured .role {
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-bottom: 8px;
-}
-
-/* Photo grid for current members */
-.member-photo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-/* Individual photo card */
-.photo-member {
-    background: #f7f9fc;
-    padding: 12px;
-    border-radius: 6px;
-    text-align: center;
-    box-shadow:
-        0 3px 8px rgba(0,0,0,0.08),
-        0 1px 3px rgba(0,0,0,0.05);
-}
-
-.photo-member img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 8px;
-}
-
-.photo-member h4 {
-    margin: 0;
-    font-size: 1rem;
-    color: var(--primary);
-}
-
-.photo-member .affiliation {
-    font-size: 0.85rem;
-    color: #555;
-    margin-top: 4px;
-}
-
-/* Past members list */
-.past-member-list {
-    padding-left: 20px;
-    font-size: 0.95rem;
-}
-
-.past-member-list li {
-    margin-bottom: 6px;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .member-photo-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 500px) {
-    .member-photo-grid {
-        grid-template-columns: 1fr;
-    }
-}
-/* ========================================= */
-/* MEMBERS PAGE – STRUCTURED PHOTO LAYOUT */
-/* ========================================= */
-
-/* Supervisor emphasis */
-.supervisor-featured {
-    display: flex;
-    gap: 22px;
-    background: #eef3f9;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow:
-        0 6px 16px rgba(0,0,0,0.10),
-        0 2px 6px rgba(0,0,0,0.06);
-}
-
-.supervisor-featured img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.supervisor-featured h4 {
-    margin: 0;
-    font-size: 1.4rem;
-    color: var(--primary);
-}
-
-.supervisor-featured .role {
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-bottom: 8px;
-}
-
-/* Shared photo member style */
-.photo-member {
-    text-align: center;
-}
-
-.photo-member img {
-    width: 180px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 6px;
-}
-
-.photo-member h4 {
-    margin: 0;
-    font-size: 1rem;
-    color: var(--primary);
-}
-
-/* PhD grid: EXACTLY 2 columns */
-.phd-grid {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 40px;
-}
-
-/* Project grid: EXACTLY 3 columns */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 30px;
-}
-
-/* Past members list */
-.past-member-list {
-    padding-left: 20px;
-    font-size: 0.95rem;
-}
-
-.past-member-list li {
-    margin-bottom: 6px;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .phd-grid,
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-}
-/* ============================= */
-/* MEMBERS PAGE – FULL-WIDTH PHOTO GRIDS */
-/* ============================= */
-
-/* Shared photo member card */
-.photo-member {
-    text-align: center;
-}
-
-.photo-member img {
-    width: 100%;
-    max-width: 260px;
-    height: auto;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 6px;
-}
-
-.photo-member h4 {
-    margin: 0;
-    font-size: 1rem;
-    color: var(--primary);
-}
-
-/* PhD: 2 columns = full width */
-.phd-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    justify-items: center;
-}
-
-/* Long-term project: 3 columns = full width */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    justify-items: center;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .phd-grid,
-    .project-grid {
-        grid-template-columns: 1fr;
-    }
-}
-/* Former members lists */
-.members-section h4 {
-    margin-top: 25px;
-    margin-bottom: 10px;
-    font-size: 1.05rem;
-    color: var(--primary);
-}
-
-.former-list {
-    padding-left: 20px;
-    margin-bottom: 20px;
-}
-
-.former-list li {
-    margin-bottom: 6px;
-    font-size: 0.95rem;
-    line-height: 1.4;
-}
-/* ================================= */
-/* FORMER MEMBERS – TABLE STYLE */
-/* ================================= */
-
-.former-table {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-top: 10px;
-}
-
-/* Each row */
-.former-row {
-    display: grid;
-    grid-template-columns: 220px 1fr; /* LEFT = names, RIGHT = position */
-    column-gap: 20px;
-    align-items: start;
-}
-
-/* Name column */
-.former-name {
-    font-weight: 600;
-    color: var(--primary);
-}
-
-/* Position column */
-.former-position {
-    font-size: 0.95rem;
-    color: #333;
-}
-
-/* Responsive */
-@media (max-width: 700px) {
-    .former-row {
-        grid-template-columns: 1fr;
-    }
-
-    .former-name {
-        margin-bottom: 2px;
-    }
-}
-.header-content {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-/* .logo {
-    height: 200px;
-    width: auto;
-} */
-/* ===== HEADER (IISc/IUCAA style) ===== */
-.main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    border-bottom: 1px solid #ddd;
-    background-color: #ffffff;
-}
-
-/* LEFT SIDE */
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-/* LOGO */
-.logo {
-    height: 120px;
-    width: auto;
-}
-
-/* TEXT */
-.title-block h1 {
-    margin: 0;
-    font-size: 3.5rem;   /* match your header */
-}
-
-.pi-line {
-    margin: 4px 0;
-    font-size: 1.05rem;
-    color: #ffd966;   /* soft gold (lighter than title) */
-    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
-}
-
-.tagline {
-    font-size: 1rem;
-    color: #ffffff;   /* even softer gold */
-    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
-}
-/* .tagline {
-    margin: 0;
-    font-size: 13px;
-    color: #777;
-} */
-
-/* NAVBAR */
-.navbar {
-    display: flex;
-    gap: 25px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #222;
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.navbar a:hover {
-    color: #0056b3;
-}
-
-/* Make header a positioning container */
-header {
-    position: relative;
-}
-
-/* NAVBAR at bottom of image */
-/* CLEAN FULL-WIDTH NAVBAR AT BOTTOM */
-.header-nav {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-
-    background: rgba(0, 0, 0, 0.6);   /* dark transparent */
-    padding: 12px 0;
-}
-
-/* Nav links */
-.header-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.header-nav a:hover {
-    color: #ffcc33;   /* matches your title */
-}
-
-.header-nav a:hover {
-    color: #0056b3;
 }
