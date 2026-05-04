@@ -264,3 +264,10 @@ footer {
         max-width: 100%;
     }
 }
+
+.photo-member {
+    background: #f7f9fc;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
