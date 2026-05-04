@@ -131,7 +131,7 @@ header {
 
     .grid-4x4 {
         grid-template-columns: repeat(4, 1fr);
-        grid-auto-rows: 1fr;   /* 🔥 equal heights */
+        grid-auto-rows: 1fr;
         gap: 20px;
     }
 
@@ -242,10 +242,25 @@ footer {
     .grid-4x4 {
         grid-template-columns: 1fr;
     }
+
+    /* ============================= */
+    /* FIXED SUPERVISOR (MEMBERS PAGE) */
+    /* ============================= */
+    .supervisor-featured {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .supervisor-featured img {
+        width: 140px;
+        height: 140px;
+    }
 }
 
 /* ============================= */
-/* MEMBERS PAGE (UNCHANGED) */
+/* MEMBERS PAGE */
 /* ============================= */
 .member-photo-grid {
     display: grid;
