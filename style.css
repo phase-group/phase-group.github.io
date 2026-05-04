@@ -201,3 +201,66 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* New code  */
+/* ============================= */
+/* MEMBERS PAGE FIX */
+/* ============================= */
+
+/* Grid for members */
+.member-photo-grid {
+    display: grid;
+    gap: 25px;
+}
+
+/* PhD → 2 columns */
+.phd-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Project → 3 columns */
+.project-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Member card */
+.photo-member {
+    text-align: center;
+}
+
+/* Image fix */
+.photo-member img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Name */
+.photo-member h4 {
+    margin: 6px 0 2px;
+    font-size: 1rem;
+}
+
+/* Role text */
+.member-role {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* ============================= */
+/* MOBILE FIX */
+/* ============================= */
+@media (max-width: 768px) {
+
+    .phd-grid,
+    .project-grid {
+        grid-template-columns: 1fr;   /* stack */
+    }
+
+    .photo-member img {
+        max-width: 100%;
+    }
+}
